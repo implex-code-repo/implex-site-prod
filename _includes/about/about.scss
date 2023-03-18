@@ -1,0 +1,116 @@
+@import 'mixins';
+
+.about.section {
+  background-color: white;
+
+  .content-block {
+    @include flex(row, center, flex-start);
+
+    @include tablet-landscape-screen {
+      padding: 0 20px;
+    }
+
+    @include tablet-screen {
+      @include flex(column, center, center);
+      padding: 0;
+    }
+
+    @include small-tablet-screen {
+      padding: 0;
+    }
+
+    .info {
+      @include flex(column, center, flex-start);
+      padding-right: 80px;
+
+      @include small-desktop-screen {
+        padding-right: 12px;
+      }
+
+      @include tablet-screen {
+        padding-bottom: 40px;
+        padding-right: 0;
+      }
+
+      .title {
+        @include font(42px, 700);
+        line-height: 1.23;
+        padding: 0;
+        margin: 0;
+
+        @include small-desktop-screen {
+          font-size: 38px;
+        }
+
+        @include mobile-screen {
+          font-size: 30px;
+        }
+
+      }
+
+      .description {
+        @include font(20px, 300);
+        line-height: 1.55;
+        text-align: left;
+        padding-top: 24px;
+        max-width: 450px;
+
+        @include small-desktop-screen {
+          font-size: 18px;
+          max-width: 460px;
+          line-height: 28px;
+        }
+
+        @include tablet-screen {
+          max-width: 600px;
+        }
+
+        @include mobile-screen {
+          font-size: 16px;
+          max-width: 100%;
+        }
+
+        .link {
+          color: $orange;
+          text-decoration: none;
+        }
+      }
+
+      .clutch-widget {
+        padding-top: 60px;
+      }
+    }
+
+    .collage {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-column-gap: 20px;
+      grid-row-gap: 20px;
+      padding-left: 16px;
+
+      @include tablet-screen {
+        padding-left: 0;
+      }
+
+      @include small-tablet-screen {
+        width: 100%;
+      }
+
+      img {
+        @include size(270px, 270px);
+
+        @include small-desktop-screen {
+          @include size(220px, 220px);
+        }
+
+        @include tablet-screen {
+          @include size(290px, 290px);
+        }
+
+        @include small-tablet-screen {
+          @include size(100%, 100%);
+        }
+      }
+    }
+  }
+}

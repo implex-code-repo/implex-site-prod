@@ -1,0 +1,114 @@
+@import 'mixins';
+
+.partnership {
+  background: url("/assets/img/background/partnership-bg-1680.webp") no-repeat center center;
+  background-size: cover;
+
+  @include mobile-screen {
+    background: url("/assets/img/background/partnership-bg-480.webp") no-repeat center center;
+  }
+
+  .overlay {
+    @include size(100%, 100%);
+    background-image: linear-gradient(rgba(0, 0, 0, .8), rgba(0, 0, 0, .9));
+
+    .content-block {
+      margin: 0 auto;
+      padding: 150px 0;
+      text-align: center;
+
+      @include tablet-landscape-screen {
+        padding: 120px 0;
+      }
+
+      @include small-tablet-screen {
+        padding: 80px 0;
+      }
+
+      @include tablet-screen {
+        max-width: 600px;
+      }
+
+      @include small-tablet-screen {
+        margin-right: 20px;
+        margin-left: 20px;
+      }
+    }
+
+    .title {
+      @include small-desktop-screen {
+        @include font(44px, 600);
+      }
+
+      @include small-tablet-screen {
+        @include font(30px, 600);
+      }
+    }
+
+    .description {
+      @include font(24px, 300);
+      line-height: 1.5;
+      margin: 0 auto;
+      max-width: 600px;
+      @include small-desktop-screen {
+        @include font(22px, 300);
+      }
+
+      @include small-tablet-screen {
+        @include font(20px, 300);
+      }
+    }
+
+    .button-wrapper {
+      display: table;
+      position: relative;
+      margin: 88px auto 0;
+
+      @include small-tablet-screen {
+        width: 100%;
+      }
+
+      .arrow-icon {
+        width: 45px;
+        position: absolute;
+        left: -30px;
+        transform: translateX(-100%);
+        fill: #fff;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+      }
+
+      .arrow-icon-mobile {
+        display: none;
+      }
+
+      @include tablet-screen {
+        .arrow-icon {
+          display: none;
+        }
+
+        .arrow-icon-mobile {
+          display: block;
+          width: 20px;
+          margin: 0 auto 20px;
+          fill: #fff;
+        }
+      }
+    }
+
+    .button {
+      margin: 0 auto;
+      font-family: 'Roboto', Arial, sans-serif;
+
+      @include tablet-screen {
+        @include size(202px, 60px);
+      }
+
+      @include mobile-screen {
+        width: 100%;
+      }
+    }
+  }
+}
+

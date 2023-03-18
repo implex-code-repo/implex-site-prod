@@ -1,0 +1,23 @@
+- name: Company
+  children:
+    - name: About us
+      link: /#about
+    - name: Careers
+      link: /careers/
+  id: company
+- name: Services
+  link: /#services
+  id: services
+- name: How it works
+  link: /#how-it-works
+  id: how-it-works
+- name: Our Clients
+  link: /case-study/
+  id: our-clients
+- name: Blog
+  link: /blog/
+  id: blog
+- name: Contact Us
+  link: '#contact-us'
+  button: true
+  id: contact-us

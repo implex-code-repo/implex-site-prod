@@ -1,0 +1,27 @@
+{% comment %}
+<!--
+  ~ Copyright (c) 2022. Implex
+  ~ All rights reserved
+  -->
+{% endcomment %}
+
+<section class="section advantages">
+  <div class="content content-block">
+    {% assign prefix = site.imgPrefix %}
+    {% assign content = site.data.advantages %}
+    <div class="text-center transite transite-up sn-1">
+      <h2 class="title">{{ content.title }}</h2>
+      <div class="description">{{ content.description }}</div>
+    </div>
+    <div class="advantages-container">
+      {% for item in content.advantages %}
+        {% assign animationIndex = forloop.index | plus: 1 %}
+        <div class="advantage transite transite-up sn-{{ animationIndex }}">
+            <img class="icon" alt="{{ item.alt }}" src="{{ prefix }}{{ item.icon }}">
+          <h3 class="adv-title">{{ item.title }}</h3>
+          <div class="adv-description">{{ item.description }}</div>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
